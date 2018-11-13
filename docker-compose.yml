@@ -1,0 +1,15 @@
+version: '3'
+services:
+  monitor:
+    build:
+      context: .
+      args:
+        extra_packages: 'coreutils'
+        tz: 'Europe/Rome'
+    environment:
+      CHANNEL: '#monitor'
+      WEBHOOK: 'https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX'
+      FREQ: '*/1 * * * *'
+      EMOJI: ':alien:'
+      SERVICE: 'TheAlienService'
+      USERNAME: 'ET'
