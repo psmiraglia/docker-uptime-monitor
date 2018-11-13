@@ -21,10 +21,9 @@
 FROM alpine:3.8
 
 # install base + extra packages
-ARG tz='Etc/UTC'
 ARG extra_packages
 RUN apk --update add bash curl tzdata ${extra_packages}
-ENV TZ=${tz}
+ENV TZ='Etc/UTC'
 
 # add check and entrypoint scripts
 WORKDIR /opt

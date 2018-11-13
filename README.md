@@ -24,11 +24,11 @@ Optional environment variables
 *   `FREQ`: Cron job frequency (default: `*/5 * * * *`)
 *   `SERVICE`: The service name (default: `MyService`)
 *   `USERNAME`: The bot name (default: `MyBot`)
+*   `TZ`: Timezone (default: `Etc/UTC`)
 
 Build arguments
 
 *   `extra_packages`: Space separated list of packages to be installed (default: `''`)
-*   `tz`: Timezone (default: `Etc/UTC`)
 
 ## How to use it
 
@@ -46,7 +46,6 @@ Build arguments
               context: .
               args:
                 extra_packages: 'coreutils'
-                tz: 'Europe/Rome'
             environment:
               CHANNEL: '#monitor'
               WEBHOOK: 'https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX'
@@ -54,6 +53,7 @@ Build arguments
               EMOJI: ':alien:'
               SERVICE: 'TheAlienService'
               USERNAME: 'ET'
+              TZ: 'Europe/Rome'
 
     and run the image
 

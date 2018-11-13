@@ -5,7 +5,6 @@ services:
       context: .
       args:
         extra_packages: 'coreutils'
-        tz: 'Europe/Rome'
     environment:
       CHANNEL: '#monitor'
       WEBHOOK: 'https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX'
@@ -13,3 +12,4 @@ services:
       EMOJI: ':alien:'
       SERVICE: 'TheAlienService'
       USERNAME: 'ET'
+      TZ: 'Europe/Rome'
